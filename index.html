@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Creator</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="invader.png">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <p>Pixel Art Creator</p>
+        </div>
+        <div class="main">
+            
+            
+            <div class="controls">
+    
+                <div class="color-card">
+                    <div class="color-box">
+                        <input type="color" id="color-select">
+                    </div>
+                    <span>Pen Color</span>
+                </div>
+                <div class="color-card cc2">
+                    <div class="color-box">
+                        <input type="color" id="bg-color-select" value="#ffffff">
+                    </div>
+                    <span>Background Color</span>
+                </div>
+                <button id="color-fill">Color Fill</button>
+                <button id="color-grabber">Color Grabber</button>
+                
+                <button id="eraser-btn">Eraser</button>
+                <button id="rainbow-btn">Rainbow Fill</button>
+                <button id="shader-btn">Shading The Fill</button>
+                <button id="lighten-btn">Lighten The Fill</button>
+                
+                
+                <div class="slider-box">
+                    <input type="range" value="24" min="1" max="60" id="range-slider"
+                    onmousemove="rangeSliderValue(this.value)" onChange="rangeSlider(this.value)">
+                    <div id="progress-bar"></div>
+                </div>
+                
+
+                <p class="grid-size">Grid Dimensions: <span id="range-value">24</span> x <span id="range-value">24</span></p>
+
+                <button id="grid-btn" class="btn-on">Toggle Grid Lines</button>
+                <button id="clear-grid">Clear</button>
+                <br>
+                <button class="btn"><i class="fa fa-download"></i> Download</button>
+            </div>
+            <div class="grid-wrapper">
+                <div class="grid-container toggle-grid" draggable="false"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
